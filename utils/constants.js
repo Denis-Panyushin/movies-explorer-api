@@ -16,6 +16,7 @@ const VALIDATE_DATA_LOGIN_MESSAGE = 'Неправильные почта или 
 const NOT_FOUND_PAGE_MESSAGE = 'Страницы не существует';
 const VALIDATE_LINK_MESSAGE = 'Неправильный формат ссылки';
 const VALIDATE_EMAIL_MESSAGE = 'Неправильный формат почты';
+const REGULAR_URL = /^(https|http)?:\/\/(www.)?[^-_.\s](\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?(:\d+)?(.+[#a-zA-Z/:0-9]{1,})?\.(.+[#a-zA-Z/:0-9]{1,})?$/i;
 
 module.exports = {
   NOT_FOUND_ERROR_CODE,
@@ -35,4 +36,5 @@ module.exports = {
   NOT_FOUND_PAGE_MESSAGE,
   VALIDATE_LINK_MESSAGE,
   VALIDATE_EMAIL_MESSAGE,
+  REGULAR_URL,
 };

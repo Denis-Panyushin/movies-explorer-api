@@ -45,6 +45,8 @@ module.exports.updateUser = (req, res, next) => {
         next(new ValidationError(INCORRECT_DATE_UPDATE_USERS_MESSAGE));
       } else if (err.statusCode === NOT_FOUND_ERROR_CODE) {
         next(new NotFoundError(NOT_FOUND_USER_MESSAGE));
+      } else if (err.code === 11000) {
+        next(new ConflictError(CONFLICT_DUPLICATE_EMAIL_MESSAGE));
       } else {
         next(err);
       }
